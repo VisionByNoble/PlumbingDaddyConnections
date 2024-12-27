@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumber's Dashboard</title>
+    <link rel="stylesheet" href="../public/css/plumber.css"> <!-- Link to CSS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon3.png">
+    <script src="/socket.io/socket.io.js" defer></script> <!-- Socket.io for real-time messaging -->
+    <script src="js/plumber.js" defer></script> <!-- JavaScript for functionality -->
+</head>
+<body>
+    <div id="dashboard">
+        <!-- Header section -->
+        <header>
+            <h1>Plumber's Dashboard</h1>
+        </header>
+
+        <!-- Main content section -->
+        <main>
+            <!-- Active chats section -->
+            <section id="active-chats">
+                <h2>Active Chats</h2>
+                <div id="chat-list">
+                    <!-- List of active chats will appear here -->
+                </div>
+            </section>
+
+            <!-- Chat window -->
+            <section id="chat-window">
+                <div id="messages"></div>
+                <div id="input-area">
+                    <input id="reply-input" type="text" placeholder="Type your reply..." />
+                    <button id="reply-button">Send</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer section -->
+        <footer>
+            <p>&copy; 2024 Plumbing Daddy</p>
+        </footer>
+    </div>
+</body>
+</html>
