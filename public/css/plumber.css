@@ -1,28 +1,65 @@
 /* Basic styling */
-body {
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #006F6A;
+    height: 100%; /* Ensures the body and HTML always span the full height of the viewport */
+    background-image: url('../images/Untitled-4.svg'); /* Set the background logo here */
+    background-repeat: no-repeat;
+    background-position: center ; /* Centers the logo */
+    background-size: contain; /* Ensures the logo is properly sized */
+    background-attachment: fixed; /* Keeps the logo fixed while scrolling */
 }
 
-header, footer {
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    background-color: #6E00D8;
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 2; /* Ensures header is above the background */
 }
 
+header h1 {
+    color: white;
+}
+
+/* Main content */
 main {
+    flex-grow: 1;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2; /* Ensures it is above the background logo */
+}
+
+#active-chats {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
 }
 
 #chat-window {
     border: 1px solid #ccc;
     padding: 10px;
-    height: 300px;
-    overflow-y: scroll;
-    background-color: white;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color:transparent;
+    z-index: 2; /* Ensures it is above the background logo */
 }
 
 #input-area {
@@ -38,7 +75,7 @@ main {
 #reply-button {
     width: 20%;
     padding: 10px;
-    background-color: #333;
+    background-color: #6E00D8;
     color: white;
     border: none;
 }
@@ -48,4 +85,11 @@ main {
     padding: 8px;
     margin: 5px 0;
     border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    background-color: #6E00D8;
+    color: white;
+    padding: 10px;
 }
